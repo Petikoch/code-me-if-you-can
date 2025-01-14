@@ -52,4 +52,5 @@ public class PhoneNumberTest {
         PhoneNumber pn = new PhoneNumber("(043) 123-4567");
         assertThat(pn.getStrippedNumber()).isEqualTo("0431234567");
     }
+
 }
