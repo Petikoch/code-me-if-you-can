@@ -6,6 +6,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class MarketingCampaignTest {
     @Test
+    public void test1() {
+        MarketingCampaign testee = new MarketingCampaign();
+
+        boolean actual = testee.isActive();
+
+        assertThat(actual).isTrue();
+    }
+
+    @Test
     public void test2() {
         MarketingCampaign testee = new MarketingCampaign();
 
