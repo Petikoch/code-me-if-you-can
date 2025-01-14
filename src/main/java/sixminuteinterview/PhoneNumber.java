@@ -53,7 +53,7 @@ public class PhoneNumber {
 
     /**************************************************************************/
     public String getValueAsInternational() {
-        return "+41" + strippedValue.substring(NATIONAL_DESTINATION_CODES[countryCodeIndex].length());
+        return null;
     }
 
     /**************************************************************************/
