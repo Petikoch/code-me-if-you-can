@@ -16,42 +16,30 @@ public class PhoneNumber {
     /**
      * The original value.
      */
-    private String originalValue = null;
+    private final String originalValue = null;
 
     // An index into the COUNTRY_CODES array
-    private int countryCodeIndex = SWITZERLAND;
-    private String strippedValue = null;
-    private String invalidReason = null;
+    private final int countryCodeIndex = SWITZERLAND;
+    private final String strippedValue = null;
+    private final String invalidReason = null;
 
     public PhoneNumber(String originalValue) {
-        this.originalValue = originalValue;
-        this.strippedValue = stripPhoneNumber(originalValue);
-        this.countryCodeIndex = getNationalDestinationCodeIndex(this.strippedValue);
-        this.invalidReason = validate(this.countryCodeIndex, this.strippedValue);
     }
 
     /**************************************************************************/
     /* Reduce the string to just numbers */
     private static String stripPhoneNumber(String number) {
-        return number.replaceAll("\\D", "");
+        return null;
     }
 
     /**************************************************************************/
     private static int getNationalDestinationCodeIndex(String strippedNumber) {
-        for (int i = 0; i < NATIONAL_DESTINATION_CODES.length; i++) {
-            if (strippedNumber.startsWith(NATIONAL_DESTINATION_CODES[i])) {
-                return i;
-            }
-        }
         return -1; // Unknown regional code
     }
 
     /**************************************************************************/
     private static String validate(int countryCodeIndex, String strippedNumber) {
-        if (countryCodeIndex == -1) {
-            return REASONS[2];
-        }
-        return validateSwissNumber(strippedNumber);
+        return countryCodeIndex == SWITZERLAND ? validateSwissNumber(strippedNumber) : REASONS[2];
     }
 
     /**************************************************************************/
