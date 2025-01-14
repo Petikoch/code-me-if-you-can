@@ -7,4 +7,4 @@ Feel free to ask the interviewer if something is unclear.
 
 ## Time
 
-This exercise should take you about 20 minutes from now on.
+You have 20 minutes time.
