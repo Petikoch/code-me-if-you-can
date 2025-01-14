@@ -1,0 +1,1 @@
+[https://github.com/codecop/dependency-breaking-katas/tree/master/Java/src/main/java/org/codecop/dependencies/b](https://github.com/codecop/dependency-breaking-katas/tree/master/Java/src/main/java/org/codecop/dependencies/b)
