@@ -2,9 +2,10 @@ package sixminuteinterview;
 
 public class PhoneNumber {
 
-    public static final int SWITZERLAND = 0;
-    public static final String[] NATIONAL_DESTINATION_CODES = {
-            "071", "043", "044", "031", "033", "034", "041", "052", "055", "061", "062", "081", "091", "021", "022", "026" // Swiss regional codes
+    public static final int ZENTRALSCHWEIZ = 6;
+    // Swiss regional codes:
+    public static final String[] ORTSVORWAHLEN = {
+            "071", "043", "044", "031", "033", "034", "041", "052", "055", "061", "062", "081", "091", "021", "022", "026"
     };
 
     private static final String[] REASONS = {
@@ -18,28 +19,31 @@ public class PhoneNumber {
      */
     private final String originalValue = null;
 
-    // An index into the COUNTRY_CODES array
-    private final int countryCodeIndex = SWITZERLAND;
+    // An index into the ORTSVORWAHLEN array
+    private final int ortsvorwahlIndex = ZENTRALSCHWEIZ;
     private final String strippedValue = null;
     private final String invalidReason = null;
 
     public PhoneNumber(String originalValue) {
+        //TODO fertig machen nach den Ferien
     }
 
     /**************************************************************************/
     /* Reduce the string to just numbers */
     private static String stripPhoneNumber(String number) {
+        //TODO fertig machen nach den Ferien
         return null;
     }
 
     /**************************************************************************/
-    private static int getNationalDestinationCodeIndex(String strippedNumber) {
+    private static int getOrtsvorwahlCodeIndex(String strippedNumber) {
+        //TODO fertig machen nach den Ferien
         return -1; // Unknown regional code
     }
 
     /**************************************************************************/
-    private static String validate(int countryCodeIndex, String strippedNumber) {
-        return countryCodeIndex == SWITZERLAND ? validateSwissNumber(strippedNumber) : REASONS[2];
+    private static String validate(int ortsvorwahlIndex, String strippedNumber) {
+        return ortsvorwahlIndex >= 0 ? validateSwissNumber(strippedNumber) : REASONS[2];
     }
 
     /**************************************************************************/
@@ -53,6 +57,7 @@ public class PhoneNumber {
 
     /**************************************************************************/
     public String getValueAsInternational() {
+        //TODO fertig machen nach den Ferien
         return null;
     }
 
