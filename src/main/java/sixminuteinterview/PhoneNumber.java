@@ -25,7 +25,7 @@ public class PhoneNumber {
     private final String invalidReason = null;
 
     public PhoneNumber(String originalValue) {
-        //TODO fertig machen nach den Ferien
+        //TODO fertig machen nach den Ferien. Instanzvariablen und Hilfsmethoden sind bereits erstellt.
     }
 
     /**************************************************************************/
